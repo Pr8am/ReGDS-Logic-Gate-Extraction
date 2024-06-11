@@ -1,4 +1,4 @@
-//LGE  GPL-3.0-or-later Copyright (C) 2020 The University of Texas at Austin
+#include <boost/graph/vf2_plus.hpp> // Example, adjust based on actual vf2++ library
 #include <fstream>
 #include <stack>
 #include <list>
@@ -91,8 +91,9 @@ void Database::libraryUpdate(std::string const &libPath)
         libGatec << "\n\tvertex_comp_t vertex_comp2 = boost::make_property_map_equivalent(get(boost::vertex_name, graph2), get(boost::vertex_name, graph));";
         libGatec << "\n\tedge_comp_t edge_comp2 = boost::make_property_map_equivalent(boost::get(boost::edge_name, graph2), boost::get(boost::edge_name, graph));";
         libGatec << "\n";
-        libGatec << "\n\tvf2_print_callback callback" << gt+1 << "(graph2, graph, " << subcktsOrd[gt].numInsts() <<", gateMap, gateSet, vArray, cktMap);";
-        libGatec << "\n\tboost::vf2_subgraph_iso(graph2, graph, callback" << gt+1 <<", vertex_order_by_mult(graph2), edges_equivalent(edge_comp2).vertices_equivalent(vertex_comp2));";
+        libGatec << "\n\tvf2_print_callback callback" << gt+1 << "(graph2, graph, " << subcktsOrd[gt].numInsts() << ", gateMap, gateSet, vArray, cktMap);";
+        libGatec << "\n\tboost::vf2_plus_subgraph_iso(graph2, graph, callback" << gt+1 << ", boost::vertex_order_by_mult(graph2), boost::edges_equivalent(edge_comp2).vertices_equivalent(vertex_comp2));";
+
         libGatec << "\n}";
         libGatec << "\n";
 
