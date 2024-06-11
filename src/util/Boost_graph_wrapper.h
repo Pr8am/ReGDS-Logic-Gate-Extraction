@@ -20,7 +20,7 @@
 #include <boost/graph/graph_traits.hpp>
 #include <boost/graph/one_bit_color_map.hpp>
 #include <boost/graph/stoer_wagner_min_cut.hpp>
-#include <boost/graph/vf2_sub_graph_iso.hpp>
+#include <boost/graph/vf2_plus.hpp>
 #include <boost/property_map/property_map.hpp>
 #include <boost/typeof/typeof.hpp>
 #include <boost/graph/graphviz.hpp>
