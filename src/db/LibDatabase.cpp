@@ -1,4 +1,4 @@
-#include <boost/graph/vf2_plus.hpp> // Example, adjust based on actual vf2++ library
+#include <boost/graph/vf2_plus.hpp> 
 #include <fstream>
 #include <stack>
 #include <list>
