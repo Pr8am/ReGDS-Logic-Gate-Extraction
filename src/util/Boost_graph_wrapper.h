@@ -1,7 +1,8 @@
 //LGE  GPL-3.0-or-later Copyright (C) 2020 The University of Texas at Austin
 
-#ifndef VF2_SUBGRAPH_ISO_H_
-#define VF2_SUBGRAPH_ISO_H_
+#ifndef VF2_PLUS_H_
+#define VF2_PLUS_H_
+
 
 /// ================================================================================ 
 /// Vertex List Graph
@@ -549,4 +550,4 @@ inline void GraphB::createGraphLib(Subckt& newckt, std::ofstream& libGatec)
 #include "library/lib_gates.cpp"
 
 PROJECT_NAMESPACE_END
-#endif ///VF2_SUBGRAPH_ISO_H_
+#endif // VF2_PLUS_H_
